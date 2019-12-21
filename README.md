@@ -1,0 +1,2 @@
+# Ecommerce App
+This repository is an ecommerce app built using serverless concepts like Firebase which integrates with third party services like Printful, Mailchimp, Stripe and Algolia. The idea behind the development of this app is to make an ecommerce store that is completely serverless and allows the developer to concentrate only on building an amazing experience for the customer and not worry about server provisioning and IT infrastructure and its maintenance.
