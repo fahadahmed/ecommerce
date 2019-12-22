@@ -27,14 +27,14 @@ const appConfig = {
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     compress: true,
-    port: 3600,
+    port: 3000,
     open: true,
     hot: true,
     historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'The Nerdy Bits | Admin Section',
+      title: 'The Nerdy Bits | Ecommerce Shop',
       template: './src/index.html',
       minify: {
         collapseWhitespace: true
