@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Routes from './pages/routes.jsx';
+
 ReactDOM.render(
-  <h1>Hello Lerna</h1>,
+  <Routes/>,
   document.querySelector('#root')
 );
