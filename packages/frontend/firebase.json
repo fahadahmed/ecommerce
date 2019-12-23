@@ -3,7 +3,8 @@
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
   },
-  "hosting": {
+  "hosting": [{
+    "target": "ecommerce-8c3a8",
     "public": "public",
     "ignore": [
       "firebase.json",
@@ -16,7 +17,7 @@
         "destination": "/index.html"
       }
     ]
-  },
+  }],
   "storage": {
     "rules": "storage.rules"
   }

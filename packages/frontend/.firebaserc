@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "ecommerce-8c3a8"
+  },
+  "targets": {
+    "ecommerce-8c3a8": {
+      "hosting": {
+        "frontend": [
+          "ecommerce-8c3a8"
+        ]
+      }
+    }
   }
 }
