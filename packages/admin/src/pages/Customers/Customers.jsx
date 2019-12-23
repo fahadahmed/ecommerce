@@ -1,10 +1,15 @@
 import React from 'react';
+import Header from '../../components/Header/Header.jsx';
+import ContentContainer from '../../components/ContentContainer/ContentContainer.jsx';
 
 function Customers() {
 
   return(
     <React.Fragment>
-      <h1>Customers Page</h1>
+      <Header title="Customers" />
+      <ContentContainer>
+        <h1>Customers Page</h1>
+      </ContentContainer>
     </React.Fragment>
   )
 }

@@ -24,6 +24,9 @@ function Routes() {
           <Switch>
             <Route path="/login" component={Login} />
             <PrivateRoute path="/dashboard" component={Dashboard} />
+            <PrivateRoute path="/products" component={Products} />
+            <PrivateRoute path="/customers" component={Customers} />
+            <PrivateRoute path="/orders" component={Orders} />
             <Redirect from="/" to="/login" />
           </Switch>
         </Router>
