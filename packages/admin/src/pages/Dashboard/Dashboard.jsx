@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from '../../components/Header/Header.jsx';
 
 function Dashboard() {
 
   return(
     <React.Fragment>
-      <h1>Dashboard</h1>
+      <Header title="Dashboard" />
     </React.Fragment>
   )
 }
