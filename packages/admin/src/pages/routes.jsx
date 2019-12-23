@@ -10,6 +10,7 @@ import { AuthProvider } from '../components/AuthProvider/Auth.jsx';
 import PrivateRoute from '../components/AuthProvider/PrivateRoute.jsx';
 
 import Products from './Products/Products.jsx';
+import AddProduct from './Products/AddProduct.jsx';
 import Customers from './Customers/Customers.jsx';
 import Orders from './Orders/Orders.jsx';
 import Login from './Login/Login.jsx';
@@ -25,6 +26,7 @@ function Routes() {
             <Route path="/login" component={Login} />
             <PrivateRoute path="/dashboard" component={Dashboard} />
             <PrivateRoute path="/products" component={Products} />
+            <PrivateRoute path="/add-product" component={AddProduct} />
             <PrivateRoute path="/customers" component={Customers} />
             <PrivateRoute path="/orders" component={Orders} />
             <Redirect from="/" to="/login" />
