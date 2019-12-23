@@ -7,6 +7,7 @@ function Dashboard() {
   return(
     <React.Fragment>
       <Header title="Dashboard" />
+      <p>This is a child component</p>
     </React.Fragment>
   )
 }
