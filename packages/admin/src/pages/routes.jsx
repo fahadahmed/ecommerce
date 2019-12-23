@@ -6,6 +6,9 @@ import {
   Redirect
 } from 'react-router-dom';
 
+import { AuthProvider } from '../components/AuthProvider/Auth.jsx';
+import PrivateRoute from '../components/AuthProvider/PrivateRoute.jsx';
+
 import Products from './Products/Products.jsx';
 import Customers from './Customers/Customers.jsx';
 import Orders from './Orders/Orders.jsx';
@@ -16,12 +19,15 @@ function Routes() {
 
   return(
     <React.Fragment>
-      <Router>
-        <Switch>
-          <Route path="/login" component={Login} />
-          <Redirect from="/" to="/login" />
-        </Switch>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Switch>
+            <Route path="/login" component={Login} />
+            <PrivateRoute path="/dashboard" component={Dashboard} />
+            <Redirect from="/" to="/login" />
+          </Switch>
+        </Router>
+      </AuthProvider>
     </React.Fragment>
   )
 }
