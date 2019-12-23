@@ -4,7 +4,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": [{
-    "target": "ecommerce-8c3a8",
+    "target": "frontend",
     "public": "public",
     "ignore": [
       "firebase.json",
