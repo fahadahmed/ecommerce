@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import styled from '@emotion/styled';
 
 function Newsletter(props) {
@@ -34,10 +34,19 @@ function Newsletter(props) {
     }
   `;
 
+  const [error, setError] = useState(null);
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    const {name, email} = e.target.elements;
+    console.log(name.value, email.value);
+    document.getElementById("newsletter").reset();
+  }
+
   return(
-    <Form>
-      <Input type="text" placeholder="Your name" />
-      <Input type="text" placeholder="Your email" />
+    <Form onSubmit={handleSubmit} id="newsletter">
+      <Input type="text" placeholder="Your name" name="name" required />
+      <Input type="text" placeholder="Your email" name="email" required />
       <Button>Subscribe</Button>
     </Form>
   )
