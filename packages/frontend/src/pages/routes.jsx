@@ -7,7 +7,9 @@ import {
 } from 'react-router-dom';
 
 import Home from './Home/Home.jsx';
-import Products from './Products/Products.jsx';
+import User from './User/User.jsx';
+import Cart from './Cart/Cart.jsx';
+import Checkout from './Checkout/Checkout.jsx';
 
 function Routes() {
 
@@ -16,7 +18,9 @@ function Routes() {
       <Router>
         <Switch>
           <Route path="/home" component={Home} />
-          <Route path="/products" component={Products} />
+          <Route path="/user" component={User} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/checkout" component={Checkout} />
           <Redirect from="/" to="/home" />
         </Switch>
       </Router>
