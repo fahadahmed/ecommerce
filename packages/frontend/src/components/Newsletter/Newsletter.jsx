@@ -36,28 +36,23 @@ function Newsletter(props) {
 
   const [error, setError] = useState(null);
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const {name, email} = e.target.elements;
     console.log(name.value, email.value);
     const payload = {
-      email: "fahad.ahmed@me.com",
-      firstName: "Rayyan"
+      email: email.value,
+      firstName: name.value
     }
     fetch('https://us-central1-ecommerce-8c3a8.cloudfunctions.net/addSubscriber', {
       method: 'POST',
-      mode: 'no-cors',
       headers: {
         ContentType: 'application/json',
       },
       body: JSON.stringify(payload)
     })
     .then(response => {
-      console.log(response.json());
-    })
-    .catch(error => {
-      console.log(error);
-      throw error;
+      console.log(JSON.parse(response));
     })
     document.getElementById("newsletter").reset();
   }
