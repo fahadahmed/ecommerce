@@ -7,6 +7,7 @@ function Product(props) {
     background: #fff;
     padding: 16px;
     box-shadow: 2px 2px 4px 0px rgba(204,204, 204, 1);
+    max-height: 430px;
   `;
 
   const Title = styled.h3`
