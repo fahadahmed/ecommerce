@@ -7,10 +7,10 @@ function Header () {
 
   return(
     <React.Fragment>
-      <div style={{ display:"flex", flexDirection: "row nowrap", justifyContent: "flex-end", paddingRight: "20px", paddingLeft: "20px", paddingTop: "10px"}}>
+      <div style={{ display:"flex", flexDirection: "row nowrap", justifyContent: "flex-end", paddingRight: "20px", paddingLeft: "20px"}}>
         <div>
           {/*<Link to="/user"><img src={User} alt="User Account" style={{margin: "10px"}}/></Link>*/}
-          <Link to="/cart"><img src={Bag} alt="Shopping Bag" style={{margin: "10px"}}/></Link>
+          <Link to="/cart"><img src={Bag} alt="Shopping Bag" style={{margin: "32px"}}/></Link>
         </div>
       </div>
     </React.Fragment>

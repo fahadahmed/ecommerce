@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import fire from '../../config/fire';
 import styled from '@emotion/styled';
 import Product from '../../components/Product/Product.jsx';
+import { observer, inject } from 'mobx-react';
 
-function Home() {
+function Home(props) {
 
   const ProductsContainer = styled.div`
     display: grid;
@@ -41,16 +42,13 @@ function Home() {
     console.log("Added a new product to cart", product, selectedVariant);
     let selectedProduct = {
       name: product.name,
-      currency: product.currency,
-      retail_price: product.retail_price,
+      price: product.retail_price,
       category: product.category,
       variant: selectedVariant,
       quantity: 1
     }
     let cartProducts = cart;
-    cartProducts.push(selectedProduct);
-    setCart(cartProducts);
-    console.log(cart);
+    props.invoice.itemList.add(selectedProduct)
   }
 
   if(loading) return <div>Loading...</div>
@@ -65,4 +63,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default inject('invoice')(observer(Home));
